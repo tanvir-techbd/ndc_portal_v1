@@ -1,0 +1,1329 @@
+[
+  {
+    "tier_key": "cloud-ecs_general-x-small-1",
+    "service_type": "cloud_ecs_general",
+    "name": "General Purpose ECS — x.Small",
+    "price_value": 3000,
+    "price_display": "৳3,000.00/mo",
+    "specs": {
+      "tier": "x.Small",
+      "resources": "2 vCPU, 4GB vMemory"
+    },
+    "display_order": 1,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "cloud-ecs_general-small-2",
+    "service_type": "cloud_ecs_general",
+    "name": "General Purpose ECS — Small",
+    "price_value": 5000,
+    "price_display": "৳5,000.00/mo",
+    "specs": {
+      "tier": "Small",
+      "resources": "4 vCPU, 8GB vMemory"
+    },
+    "display_order": 2,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "cloud-ecs_general-l-medium-3",
+    "service_type": "cloud_ecs_general",
+    "name": "General Purpose ECS — l.Medium",
+    "price_value": 7000,
+    "price_display": "৳7,000.00/mo",
+    "specs": {
+      "tier": "l.Medium",
+      "resources": "4 vCPU, 12GB vMemory"
+    },
+    "display_order": 3,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "cloud-ecs_general-medium-4",
+    "service_type": "cloud_ecs_general",
+    "name": "General Purpose ECS — Medium",
+    "price_value": 10000,
+    "price_display": "৳10,000.00/mo",
+    "specs": {
+      "tier": "Medium",
+      "resources": "8 vCPU, 16GB vMemory"
+    },
+    "display_order": 4,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "cloud-ecs_general-x-medium-5",
+    "service_type": "cloud_ecs_general",
+    "name": "General Purpose ECS — x.Medium",
+    "price_value": 12000,
+    "price_display": "৳12,000.00/mo",
+    "specs": {
+      "tier": "x.Medium",
+      "resources": "8 vCPU, 32GB vMemory"
+    },
+    "display_order": 5,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "cloud-ecs_general-regular-6",
+    "service_type": "cloud_ecs_general",
+    "name": "General Purpose ECS — Regular",
+    "price_value": 13000,
+    "price_display": "৳13,000.00/mo",
+    "specs": {
+      "tier": "Regular",
+      "resources": "12 vCPU, 24GB vMemory"
+    },
+    "display_order": 6,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "cloud-ecs_general-x-regular-7",
+    "service_type": "cloud_ecs_general",
+    "name": "General Purpose ECS — x.Regular",
+    "price_value": 14000,
+    "price_display": "৳14,000.00/mo",
+    "specs": {
+      "tier": "x.Regular",
+      "resources": "12 vCPU, 32GB vMemory"
+    },
+    "display_order": 7,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "cloud-ecs_general-large-8",
+    "service_type": "cloud_ecs_general",
+    "name": "General Purpose ECS — Large",
+    "price_value": 15000,
+    "price_display": "৳15,000.00/mo",
+    "specs": {
+      "tier": "Large",
+      "resources": "16 vCPU, 32GB vMemory"
+    },
+    "display_order": 8,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "cloud-ecs_general-x-large-9",
+    "service_type": "cloud_ecs_general",
+    "name": "General Purpose ECS — x.Large",
+    "price_value": 30000,
+    "price_display": "৳30,000.00/mo",
+    "specs": {
+      "tier": "x.Large",
+      "resources": "16 vCPU, 64GB vMemory"
+    },
+    "display_order": 9,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "cloud-ecs_general-2x-large-10",
+    "service_type": "cloud_ecs_general",
+    "name": "General Purpose ECS — 2x.Large",
+    "price_value": 40000,
+    "price_display": "৳40,000.00/mo",
+    "specs": {
+      "tier": "2x.Large",
+      "resources": "32 vCPU, 64GB vMemory"
+    },
+    "display_order": 10,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "cloud-ecs_general-3x-large-11",
+    "service_type": "cloud_ecs_general",
+    "name": "General Purpose ECS — 3x.Large",
+    "price_value": 60000,
+    "price_display": "৳60,000.00/mo",
+    "specs": {
+      "tier": "3x.Large",
+      "resources": "48 vCPU, 96GB vMemory"
+    },
+    "display_order": 11,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "cloud-ecs_general-4x-large-12",
+    "service_type": "cloud_ecs_general",
+    "name": "General Purpose ECS — 4x.Large",
+    "price_value": 65000,
+    "price_display": "৳65,000.00/mo",
+    "specs": {
+      "tier": "4x.Large",
+      "resources": "48 vCPU, 128GB vMemory"
+    },
+    "display_order": 12,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "cloud-ecs_general-5x-large-13",
+    "service_type": "cloud_ecs_general",
+    "name": "General Purpose ECS — 5x.Large",
+    "price_value": 80000,
+    "price_display": "৳80,000.00/mo",
+    "specs": {
+      "tier": "5x.Large",
+      "resources": "64 vCPU, 128GB vMemory"
+    },
+    "display_order": 13,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "cloud-ecs_memory-mi-x-small-14",
+    "service_type": "cloud_ecs_memory",
+    "name": "Memory Intensive ECS — mi.x.Small",
+    "price_value": 4000,
+    "price_display": "৳4,000.00/mo",
+    "specs": {
+      "tier": "mi.x.Small",
+      "resources": "2 vCPU, 8GB vMemory"
+    },
+    "display_order": 14,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "cloud-ecs_memory-mi-small-15",
+    "service_type": "cloud_ecs_memory",
+    "name": "Memory Intensive ECS — mi.Small",
+    "price_value": 8000,
+    "price_display": "৳8,000.00/mo",
+    "specs": {
+      "tier": "mi.Small",
+      "resources": "4 vCPU, 16GB vMemory"
+    },
+    "display_order": 15,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "cloud-ecs_memory-mi-l-medium-16",
+    "service_type": "cloud_ecs_memory",
+    "name": "Memory Intensive ECS — mi.l.Medium",
+    "price_value": 10000,
+    "price_display": "৳10,000.00/mo",
+    "specs": {
+      "tier": "mi.l.Medium",
+      "resources": "4 vCPU, 24GB vMemory"
+    },
+    "display_order": 16,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "cloud-ecs_memory-mi-medium-17",
+    "service_type": "cloud_ecs_memory",
+    "name": "Memory Intensive ECS — mi.Medium",
+    "price_value": 11000,
+    "price_display": "৳11,000.00/mo",
+    "specs": {
+      "tier": "mi.Medium",
+      "resources": "6 vCPU, 32GB vMemory"
+    },
+    "display_order": 17,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "cloud-ecs_memory-mi-large-18",
+    "service_type": "cloud_ecs_memory",
+    "name": "Memory Intensive ECS — mi.Large",
+    "price_value": 20000,
+    "price_display": "৳20,000.00/mo",
+    "specs": {
+      "tier": "mi.Large",
+      "resources": "8 vCPU, 48GB vMemory"
+    },
+    "display_order": 18,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "cloud-ecs_memory-mi-x-large-19",
+    "service_type": "cloud_ecs_memory",
+    "name": "Memory Intensive ECS — mi.x.Large",
+    "price_value": 25000,
+    "price_display": "৳25,000.00/mo",
+    "specs": {
+      "tier": "mi.x.Large",
+      "resources": "8 vCPU, 64GB vMemory"
+    },
+    "display_order": 19,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "cloud-ecs_memory-mi-2x-large-20",
+    "service_type": "cloud_ecs_memory",
+    "name": "Memory Intensive ECS — mi.2x.Large",
+    "price_value": 35000,
+    "price_display": "৳35,000.00/mo",
+    "specs": {
+      "tier": "mi.2x.Large",
+      "resources": "16 vCPU, 96GB vMemory"
+    },
+    "display_order": 20,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "cloud-ecs_memory-mi-3x-large-21",
+    "service_type": "cloud_ecs_memory",
+    "name": "Memory Intensive ECS — mi.3x.Large",
+    "price_value": 45000,
+    "price_display": "৳45,000.00/mo",
+    "specs": {
+      "tier": "mi.3x.Large",
+      "resources": "16 vCPU, 128GB vMemory"
+    },
+    "display_order": 21,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "cloud-ecs_memory-mi-4x-large-22",
+    "service_type": "cloud_ecs_memory",
+    "name": "Memory Intensive ECS — mi.4x.Large",
+    "price_value": 50000,
+    "price_display": "৳50,000.00/mo",
+    "specs": {
+      "tier": "mi.4x.Large",
+      "resources": "32 vCPU, 128GB vMemory"
+    },
+    "display_order": 22,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "cloud-ecs_memory-mi-5x-large-23",
+    "service_type": "cloud_ecs_memory",
+    "name": "Memory Intensive ECS — mi.5x.Large",
+    "price_value": 60000,
+    "price_display": "৳60,000.00/mo",
+    "specs": {
+      "tier": "mi.5x.Large",
+      "resources": "32 vCPU, 192GB vMemory"
+    },
+    "display_order": 23,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "cloud-ecs_accelerated-nt4-small-24",
+    "service_type": "cloud_ecs_accelerated",
+    "name": "Accelerated ECS (GPU) — nT4.Small",
+    "price_value": 50000,
+    "price_display": "৳50,000.00/mo",
+    "specs": {
+      "tier": "nT4.Small",
+      "resources": "16 vCPU, 64GB vMemory, 1x NVIDIA T4 GPU"
+    },
+    "display_order": 24,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "cloud-ecs_accelerated-nt4-medium-25",
+    "service_type": "cloud_ecs_accelerated",
+    "name": "Accelerated ECS (GPU) — nT4.Medium",
+    "price_value": 65000,
+    "price_display": "৳65,000.00/mo",
+    "specs": {
+      "tier": "nT4.Medium",
+      "resources": "32 vCPU, 128GB vMemory, 1x NVIDIA T4 GPU"
+    },
+    "display_order": 25,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "cloud-ecs_accelerated-nt4-large-26",
+    "service_type": "cloud_ecs_accelerated",
+    "name": "Accelerated ECS (GPU) — nT4.Large",
+    "price_value": 70000,
+    "price_display": "৳70,000.00/mo",
+    "specs": {
+      "tier": "nT4.Large",
+      "resources": "16 vCPU, 64GB vMemory, 2x NVIDIA T4 GPU"
+    },
+    "display_order": 26,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "cloud-ecs_accelerated-nt4-x-large-27",
+    "service_type": "cloud_ecs_accelerated",
+    "name": "Accelerated ECS (GPU) — nT4.x.Large",
+    "price_value": 100000,
+    "price_display": "৳100,000.00/mo",
+    "specs": {
+      "tier": "nT4.x.Large",
+      "resources": "32 vCPU, 128GB vMemory, 2x NVIDIA T4 GPU"
+    },
+    "display_order": 27,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "cloud-ecs_accelerated-nv100s-small-28",
+    "service_type": "cloud_ecs_accelerated",
+    "name": "Accelerated ECS (GPU) — nV100s.Small",
+    "price_value": 75000,
+    "price_display": "৳75,000.00/mo",
+    "specs": {
+      "tier": "nV100s.Small",
+      "resources": "16 vCPU, 64GB vMemory, 1x V100s GPU"
+    },
+    "display_order": 28,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "cloud-ecs_accelerated-nv100s-medium-29",
+    "service_type": "cloud_ecs_accelerated",
+    "name": "Accelerated ECS (GPU) — nV100s.Medium",
+    "price_value": 110000,
+    "price_display": "৳110,000.00/mo",
+    "specs": {
+      "tier": "nV100s.Medium",
+      "resources": "32 vCPU, 128GB vMemory, 1x V100s GPU"
+    },
+    "display_order": 29,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "cloud-storage-general-purpose-30",
+    "service_type": "cloud_storage",
+    "name": "Elastic Block Storage — General Purpose",
+    "price_value": 10,
+    "price_display": "৳10.00/GB/mo",
+    "specs": {
+      "billing": "Per GB",
+      "tier": "General Purpose"
+    },
+    "display_order": 30,
+    "price_unit": "/GB/mo"
+  },
+  {
+    "tier_key": "cloud-storage-high-performance-31",
+    "service_type": "cloud_storage",
+    "name": "Elastic Block Storage — High Performance",
+    "price_value": 20,
+    "price_display": "৳20.00/GB/mo",
+    "specs": {
+      "billing": "Per GB",
+      "tier": "High Performance"
+    },
+    "display_order": 31,
+    "price_unit": "/GB/mo"
+  },
+  {
+    "tier_key": "cloud-storage-standard-32",
+    "service_type": "cloud_storage",
+    "name": "Object Storage — Standard",
+    "price_value": 20,
+    "price_display": "৳20.00/GB/mo",
+    "specs": {
+      "billing": "Per GB",
+      "tier": "Standard"
+    },
+    "display_order": 32,
+    "price_unit": "/GB/mo"
+  },
+  {
+    "tier_key": "cloud-autoscaling-standard-33",
+    "service_type": "cloud_autoscaling",
+    "name": "Auto Scaling (AS) — Standard",
+    "price_value": null,
+    "price_display": "Same as ECS fee",
+    "specs": {
+      "billing": "Per ECS",
+      "tier": "Standard"
+    },
+    "display_order": 33,
+    "price_unit": null
+  },
+  {
+    "tier_key": "cloud-network-standard-34",
+    "service_type": "cloud_network",
+    "name": "Elastic IP (EIP) — Standard",
+    "price_value": 500,
+    "price_display": "৳500.00/mo",
+    "specs": {
+      "billing": "Per IP Address",
+      "tier": "Standard"
+    },
+    "display_order": 34,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "cloud-network-standard-35",
+    "service_type": "cloud_network",
+    "name": "Elastic Load Balancer — Standard",
+    "price_value": 5000,
+    "price_display": "৳5,000.00/mo",
+    "specs": {
+      "type": "Network Load Balancer (TCP/UDP)",
+      "tier": "Standard"
+    },
+    "display_order": 35,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "cloud-backup-standard-36",
+    "service_type": "cloud_backup",
+    "name": "ECS Snapshot Backup Service — Standard",
+    "price_value": 20,
+    "price_display": "৳20.00/GB/mo",
+    "specs": {
+      "billing": "Per GB",
+      "tier": "Standard"
+    },
+    "display_order": 36,
+    "price_unit": "/GB/mo"
+  },
+  {
+    "tier_key": "cloud-container-per-vcpu-37",
+    "service_type": "cloud_container",
+    "name": "Container Service (eGovCloud Kubernetes) — vCPU",
+    "price_value": 1500,
+    "price_display": "৳1,500.00/vCPU/mo",
+    "specs": {
+      "tier": "vCPU"
+    },
+    "display_order": 37,
+    "price_unit": "/vCPU/mo"
+  },
+  {
+    "tier_key": "cloud-container-per-gb-vmemory-38",
+    "service_type": "cloud_container",
+    "name": "Container Service (eGovCloud Kubernetes) — vMemory",
+    "price_value": 200,
+    "price_display": "৳200.00/GB/mo",
+    "specs": {
+      "tier": "vMemory"
+    },
+    "display_order": 38,
+    "price_unit": "/GB/mo"
+  },
+  {
+    "tier_key": "cloud-container-mixed-storage-39",
+    "service_type": "cloud_container",
+    "name": "Container Service — Persistence Storage (Mixed)",
+    "price_value": 10,
+    "price_display": "৳10.00/GB/mo",
+    "specs": {
+      "tier": "Storage (Mixed)"
+    },
+    "display_order": 39,
+    "price_unit": "/GB/mo"
+  },
+  {
+    "tier_key": "cloud-container-ssd-storage-40",
+    "service_type": "cloud_container",
+    "name": "Container Service — Persistence Storage (SSD)",
+    "price_value": 20,
+    "price_display": "৳20.00/GB/mo",
+    "specs": {
+      "tier": "Storage (SSD)"
+    },
+    "display_order": 40,
+    "price_unit": "/GB/mo"
+  },
+  {
+    "tier_key": "cloud-paas_app-apache-nginx-haproxy-41",
+    "service_type": "cloud_paas_app",
+    "name": "Hardened Application Platform — Apache / Nginx / Haproxy",
+    "price_value": null,
+    "price_display": "ECS Cost + ৳1,000.00",
+    "specs": {
+      "billing": "Add-on to ECS cost",
+      "tier": "Apache/Nginx/HAProxy"
+    },
+    "display_order": 41,
+    "price_unit": null
+  },
+  {
+    "tier_key": "cloud-paas_app-tomcat-42",
+    "service_type": "cloud_paas_app",
+    "name": "Hardened Application Platform — Tomcat",
+    "price_value": null,
+    "price_display": "ECS Cost + ৳1,500.00",
+    "specs": {
+      "billing": "Add-on to ECS cost",
+      "tier": "Tomcat"
+    },
+    "display_order": 42,
+    "price_unit": null
+  },
+  {
+    "tier_key": "cloud-paas_app-iis-43",
+    "service_type": "cloud_paas_app",
+    "name": "Hardened Application Platform — IIS",
+    "price_value": null,
+    "price_display": "ECS Cost + ৳1,500.00",
+    "specs": {
+      "billing": "Add-on to ECS cost",
+      "tier": "IIS"
+    },
+    "display_order": 43,
+    "price_unit": null
+  },
+  {
+    "tier_key": "cloud-paas_app-lamp-44",
+    "service_type": "cloud_paas_app",
+    "name": "Hardened Application Platform — LAMP",
+    "price_value": null,
+    "price_display": "ECS Cost + ৳2,000.00",
+    "specs": {
+      "billing": "Add-on to ECS cost",
+      "tier": "LAMP"
+    },
+    "display_order": 44,
+    "price_unit": null
+  },
+  {
+    "tier_key": "cloud-paas_app-wordpress-45",
+    "service_type": "cloud_paas_app",
+    "name": "Hardened Application Platform — WordPress",
+    "price_value": null,
+    "price_display": "ECS Cost + ৳2,000.00",
+    "specs": {
+      "billing": "Add-on to ECS cost",
+      "tier": "WordPress"
+    },
+    "display_order": 45,
+    "price_unit": null
+  },
+  {
+    "tier_key": "cloud-paas_app-tensorflow-46",
+    "service_type": "cloud_paas_app",
+    "name": "Hardened Application Platform — Tensorflow",
+    "price_value": null,
+    "price_display": "ECS Cost + ৳1,000.00",
+    "specs": {
+      "billing": "Add-on to ECS cost",
+      "tier": "Tensorflow"
+    },
+    "display_order": 46,
+    "price_unit": null
+  },
+  {
+    "tier_key": "cloud-paas_db-mariadb-single-node-47",
+    "service_type": "cloud_paas_db",
+    "name": "Database Platform — MariaDB (Single Node)",
+    "price_value": null,
+    "price_display": "ECS Cost + ৳3,000.00",
+    "specs": {
+      "billing": "Add-on to ECS cost",
+      "tier": "MariaDB (Single)"
+    },
+    "display_order": 47,
+    "price_unit": null
+  },
+  {
+    "tier_key": "cloud-paas_db-mariadb-master-slave-48",
+    "service_type": "cloud_paas_db",
+    "name": "Database Platform — MariaDB (Master-Slave)",
+    "price_value": null,
+    "price_display": "ECS Cost + ৳5,000.00",
+    "specs": {
+      "billing": "Add-on to ECS cost",
+      "tier": "MariaDB (M-S)"
+    },
+    "display_order": 48,
+    "price_unit": null
+  },
+  {
+    "tier_key": "cloud-paas_db-mysql-perconadb-multi-master-49",
+    "service_type": "cloud_paas_db",
+    "name": "Database Platform — MySQL PerconaDB (Multi-Master)",
+    "price_value": null,
+    "price_display": "ECS Cost + ৳6,000.00",
+    "specs": {
+      "billing": "Add-on to ECS cost",
+      "tier": "PerconaDB"
+    },
+    "display_order": 49,
+    "price_unit": null
+  },
+  {
+    "tier_key": "cloud-paas_db-postgresql-standalone-50",
+    "service_type": "cloud_paas_db",
+    "name": "Database Platform — PostgreSQL (Standalone)",
+    "price_value": null,
+    "price_display": "ECS Cost + ৳3,000.00",
+    "specs": {
+      "billing": "Add-on to ECS cost",
+      "tier": "PostgreSQL"
+    },
+    "display_order": 50,
+    "price_unit": null
+  },
+  {
+    "tier_key": "cloud-paas_db-postgresql-active-passive-51",
+    "service_type": "cloud_paas_db",
+    "name": "Database Platform — PostgreSQL (Active-Passive)",
+    "price_value": null,
+    "price_display": "ECS Cost + ৳5,000.00",
+    "specs": {
+      "billing": "Add-on to ECS cost",
+      "tier": "PostgreSQL (A-P)"
+    },
+    "display_order": 51,
+    "price_unit": null
+  },
+  {
+    "tier_key": "cloud-paas_db-redis-single-node-52",
+    "service_type": "cloud_paas_db",
+    "name": "Database Platform — Redis (Single Node)",
+    "price_value": null,
+    "price_display": "ECS Cost + ৳3,000.00",
+    "specs": {
+      "billing": "Add-on to ECS cost",
+      "tier": "Redis (Single)"
+    },
+    "display_order": 52,
+    "price_unit": null
+  },
+  {
+    "tier_key": "cloud-paas_db-redis-master-slave-53",
+    "service_type": "cloud_paas_db",
+    "name": "Database Platform — Redis (Master-Slave)",
+    "price_value": null,
+    "price_display": "ECS Cost + ৳5,000.00",
+    "specs": {
+      "billing": "Add-on to ECS cost",
+      "tier": "Redis (M-S)"
+    },
+    "display_order": 53,
+    "price_unit": null
+  },
+  {
+    "tier_key": "cloud-paas_db-elastic-search-54",
+    "service_type": "cloud_paas_db",
+    "name": "Database Platform — Elastic Search",
+    "price_value": null,
+    "price_display": "ECS Cost + ৳4,000.00",
+    "specs": {
+      "billing": "Add-on to ECS cost",
+      "tier": "ElasticSearch"
+    },
+    "display_order": 54,
+    "price_unit": null
+  },
+  {
+    "tier_key": "cloud-paas_db-mongodb-single-node-55",
+    "service_type": "cloud_paas_db",
+    "name": "Database Platform — MongoDB (Single Node)",
+    "price_value": null,
+    "price_display": "ECS Cost + ৳3,000.00",
+    "specs": {
+      "billing": "Add-on to ECS cost",
+      "tier": "MongoDB (Single)"
+    },
+    "display_order": 55,
+    "price_unit": null
+  },
+  {
+    "tier_key": "cloud-paas_db-mongodb-sharded-1-config-2-data-1-router-node-56",
+    "service_type": "cloud_paas_db",
+    "name": "Database Platform — MongoDB (Sharded — 1 Config, 2 Data & 1 Router Node)",
+    "price_value": null,
+    "price_display": "ECS Cost + ৳7,000.00",
+    "specs": {
+      "billing": "Add-on to ECS cost",
+      "tier": "MongoDB (Sharded)"
+    },
+    "display_order": 56,
+    "price_unit": null
+  },
+  {
+    "tier_key": "cloud-paas_db-cassandra-cluster-57",
+    "service_type": "cloud_paas_db",
+    "name": "Database Platform — Cassandra Cluster",
+    "price_value": null,
+    "price_display": "ECS Cost + ৳5,000.00",
+    "specs": {
+      "billing": "Add-on to ECS cost",
+      "tier": "Cassandra"
+    },
+    "display_order": 57,
+    "price_unit": null
+  },
+  {
+    "tier_key": "cloud-paas_messaging-kafka-58",
+    "service_type": "cloud_paas_messaging",
+    "name": "Messaging Platform — Kafka",
+    "price_value": null,
+    "price_display": "ECS Cost + ৳4,000.00",
+    "specs": {
+      "tier": "Kafka"
+    },
+    "display_order": 58,
+    "price_unit": null
+  },
+  {
+    "tier_key": "cloud-paas_messaging-rabbitmq-59",
+    "service_type": "cloud_paas_messaging",
+    "name": "Messaging Platform — RabbitMQ",
+    "price_value": null,
+    "price_display": "ECS Cost + ৳3,000.00",
+    "specs": {
+      "tier": "RabbitMQ"
+    },
+    "display_order": 59,
+    "price_unit": null
+  },
+  {
+    "tier_key": "cloud-paas_monitoring-zabbix-60",
+    "service_type": "cloud_paas_monitoring",
+    "name": "Monitoring Platform — Zabbix",
+    "price_value": null,
+    "price_display": "ECS Cost + ৳1,000.00",
+    "specs": {
+      "tier": "Zabbix"
+    },
+    "display_order": 60,
+    "price_unit": null
+  },
+  {
+    "tier_key": "cloud-paas_monitoring-nagios-61",
+    "service_type": "cloud_paas_monitoring",
+    "name": "Monitoring Platform — Nagios",
+    "price_value": null,
+    "price_display": "ECS Cost + ৳1,000.00",
+    "specs": {
+      "tier": "Nagios"
+    },
+    "display_order": 61,
+    "price_unit": null
+  },
+  {
+    "tier_key": "cloud-paas_monitoring-icinga-62",
+    "service_type": "cloud_paas_monitoring",
+    "name": "Monitoring Platform — Icinga",
+    "price_value": null,
+    "price_display": "ECS Cost + ৳1,000.00",
+    "specs": {
+      "tier": "Icinga"
+    },
+    "display_order": 62,
+    "price_unit": null
+  },
+  {
+    "tier_key": "cloud-openshift-per-vcpu-63",
+    "service_type": "cloud_openshift",
+    "name": "OpenShift on BCC eGovCloud — vCPU",
+    "price_value": 2000,
+    "price_display": "৳2,000.00/vCPU/mo",
+    "specs": {
+      "tier": "vCPU"
+    },
+    "display_order": 63,
+    "price_unit": "/vCPU/mo"
+  },
+  {
+    "tier_key": "cloud-openshift-per-vmemory-64",
+    "service_type": "cloud_openshift",
+    "name": "OpenShift on BCC eGovCloud — vMemory",
+    "price_value": 300,
+    "price_display": "৳300.00/GB/mo",
+    "specs": {
+      "tier": "vMemory"
+    },
+    "display_order": 64,
+    "price_unit": "/GB/mo"
+  },
+  {
+    "tier_key": "cloud-openshift-persistent-storage-65",
+    "service_type": "cloud_openshift",
+    "name": "OpenShift on BCC eGovCloud — Persistent Storage",
+    "price_value": 20,
+    "price_display": "৳20.00/GB/mo",
+    "specs": {
+      "tier": "Persistent Storage"
+    },
+    "display_order": 65,
+    "price_unit": "/GB/mo"
+  },
+  {
+    "tier_key": "cloud-dr-cdrs-66",
+    "service_type": "cloud_dr",
+    "name": "Disaster Recovery Service (CDRS)",
+    "price_value": null,
+    "price_display": "Similar to ECS, EBS & other cloud resource cost",
+    "specs": {
+      "note": "Region or service protection method",
+      "tier": "Standard"
+    },
+    "display_order": 66,
+    "price_unit": null
+  },
+  {
+    "tier_key": "rbs-vps-basic-1",
+    "service_type": "rbs_vps",
+    "name": "VPS — Basic",
+    "price_value": 5000,
+    "price_display": "৳5,000.00/mo",
+    "specs": {
+      "resources": "2 vCPU, 4 GB RAM, 100 GB Storage",
+      "tier": "Basic"
+    },
+    "display_order": 1,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "rbs-vps-standard-2",
+    "service_type": "rbs_vps",
+    "name": "VPS — Standard",
+    "price_value": 10000,
+    "price_display": "৳10,000.00/mo",
+    "specs": {
+      "resources": "4 vCPU, 8 GB RAM, 200 GB Storage",
+      "tier": "Standard"
+    },
+    "display_order": 2,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "rbs-vps-advanced-3",
+    "service_type": "rbs_vps",
+    "name": "VPS — Advanced",
+    "price_value": 15000,
+    "price_display": "৳15,000.00/mo",
+    "specs": {
+      "resources": "4 vCPU, 12 GB RAM, 300 GB Storage",
+      "tier": "Advanced"
+    },
+    "display_order": 3,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "rbs-vps-premium-4",
+    "service_type": "rbs_vps",
+    "name": "VPS — Premium",
+    "price_value": 20000,
+    "price_display": "৳20,000.00/mo",
+    "specs": {
+      "resources": "8 vCPU, 16 GB RAM, 500 GB Storage",
+      "tier": "Premium"
+    },
+    "display_order": 4,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "rbs-email-account-quota-5",
+    "service_type": "rbs_email",
+    "name": "Email Service — Account Quota",
+    "price_value": 100,
+    "price_display": "৳100.00/account/mo",
+    "specs": {
+      "quota": "1GB – 5GB, upgradable",
+      "tier": "Account Quota"
+    },
+    "display_order": 5,
+    "price_unit": "/account/mo"
+  },
+  {
+    "tier_key": "rbs-email-domain-quota-upgrade-6",
+    "service_type": "rbs_email",
+    "name": "Email Service — Domain Quota Upgrade",
+    "price_value": 20,
+    "price_display": "৳20.00/GB",
+    "specs": {
+      "note": "Minimum 25GB/domain",
+      "tier": "Domain Quota Upgrade"
+    },
+    "display_order": 6,
+    "price_unit": "/GB"
+  },
+  {
+    "tier_key": "rbs-email-delegated-admin-7",
+    "service_type": "rbs_email",
+    "name": "Email Service — Delegated Admin",
+    "price_value": 2000,
+    "price_display": "৳2,000.00/mo",
+    "specs": {
+      "tier": "Delegated Admin"
+    },
+    "display_order": 7,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "rbs-email-cloud-drive-8",
+    "service_type": "rbs_email",
+    "name": "e-Government Cloud Drive (with Email)",
+    "price_value": null,
+    "price_display": "Complimentary",
+    "specs": {
+      "quota": "10GB/account",
+      "tier": "Standard"
+    },
+    "display_order": 8,
+    "price_unit": null
+  },
+  {
+    "tier_key": "rbs-database_managed-basic-9",
+    "service_type": "rbs_database_managed",
+    "name": "Managed Database Service — Basic",
+    "price_value": 15000,
+    "price_display": "৳15,000.00/mo",
+    "specs": {
+      "resources": "Shared (max 10GB database/schema)",
+      "additional_storage": "৳100.00/GB",
+      "tier": "Basic"
+    },
+    "display_order": 9,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "rbs-database_managed-standard-10",
+    "service_type": "rbs_database_managed",
+    "name": "Managed Database Service — Standard",
+    "price_value": 15000,
+    "price_display": "৳15,000.00/mo",
+    "specs": {
+      "resources": "Dedicated — Single Server per Core (max 500GB, BYOL)",
+      "additional_storage": "৳100.00/GB",
+      "tier": "Standard"
+    },
+    "display_order": 10,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "rbs-database_managed-advanced-11",
+    "service_type": "rbs_database_managed",
+    "name": "Managed Database Service — Advanced",
+    "price_value": 20000,
+    "price_display": "৳20,000.00/mo",
+    "specs": {
+      "resources": "Dedicated — HA Server per Core (max 1TB, BYOL)",
+      "additional_storage": "৳100.00/GB",
+      "tier": "Advanced"
+    },
+    "display_order": 11,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "rbs-database_managed-premium-12",
+    "service_type": "rbs_database_managed",
+    "name": "Managed Database Service — Premium",
+    "price_value": 30000,
+    "price_display": "৳30,000.00/mo",
+    "specs": {
+      "resources": "Dedicated — HA Server per Core with DR (max 1TB, BYOL)",
+      "additional_storage": "৳100.00/GB",
+      "tier": "Premium"
+    },
+    "display_order": 12,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "rbs-database_mysql-basic-13",
+    "service_type": "rbs_database_mysql",
+    "name": "MySQL Database Service — Basic",
+    "price_value": 10000,
+    "price_display": "৳10,000.00/mo",
+    "specs": {
+      "resources": "1 database, 10 GB, HA",
+      "tier": "Basic"
+    },
+    "display_order": 13,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "rbs-database_mysql-standard-14",
+    "service_type": "rbs_database_mysql",
+    "name": "MySQL Database Service — Standard",
+    "price_value": 15000,
+    "price_display": "৳15,000.00/mo",
+    "specs": {
+      "resources": "3 databases, 20 GB, HA",
+      "tier": "Standard"
+    },
+    "display_order": 14,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "rbs-database_mysql-advanced-15",
+    "service_type": "rbs_database_mysql",
+    "name": "MySQL Database Service — Advanced",
+    "price_value": 20000,
+    "price_display": "৳20,000.00/mo",
+    "specs": {
+      "resources": "5 databases, 30 GB, HA",
+      "tier": "Advanced"
+    },
+    "display_order": 15,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "rbs-database_mysql-premium-16",
+    "service_type": "rbs_database_mysql",
+    "name": "MySQL Database Service — Premium",
+    "price_value": 25000,
+    "price_display": "৳25,000.00/mo",
+    "specs": {
+      "resources": "5 databases, 50 GB, HA",
+      "tier": "Premium"
+    },
+    "display_order": 16,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "rbs-private_access-basic-17",
+    "service_type": "rbs_private_access",
+    "name": "NDC Private Access — Basic (Single Port, max 4 sub-interfaces)",
+    "price_value": 100000,
+    "price_display": "৳100,000.00 one-time + ৳25,000.00/yr",
+    "specs": {
+      "installation_fee": "৳100,000.00 one-time",
+      "annual_fee": "৳25,000.00/yr",
+      "tier": "Basic"
+    },
+    "display_order": 17,
+    "price_unit": null
+  },
+  {
+    "tier_key": "rbs-private_access-standard-18",
+    "service_type": "rbs_private_access",
+    "name": "NDC Private Access — Standard (2 Ports, max 8 sub-interfaces)",
+    "price_value": 100000,
+    "price_display": "৳100,000.00 one-time + ৳50,000.00/yr",
+    "specs": {
+      "installation_fee": "৳100,000.00 one-time",
+      "annual_fee": "৳50,000.00/yr",
+      "tier": "Standard"
+    },
+    "display_order": 18,
+    "price_unit": null
+  },
+  {
+    "tier_key": "rbs-public_ip-standard-19",
+    "service_type": "rbs_public_ip",
+    "name": "Public IP Address — Standard",
+    "price_value": 500,
+    "price_display": "৳500.00/mo",
+    "specs": {
+      "note": "1 Public IP, unlimited bandwidth. Used with other RBS.",
+      "tier": "Standard"
+    },
+    "display_order": 19,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "rbs-block_storage-standard-20",
+    "service_type": "rbs_block_storage",
+    "name": "Block Storage — Standard (Mixed)",
+    "price_value": 10,
+    "price_display": "৳10.00/GB/mo",
+    "specs": {
+      "tier": "Standard (Mixed)"
+    },
+    "display_order": 20,
+    "price_unit": "/GB/mo"
+  },
+  {
+    "tier_key": "rbs-block_storage-premium-21",
+    "service_type": "rbs_block_storage",
+    "name": "Block Storage — Premium (SSD)",
+    "price_value": 20,
+    "price_display": "৳20.00/GB/mo",
+    "specs": {
+      "tier": "Premium (SSD)"
+    },
+    "display_order": 21,
+    "price_unit": "/GB/mo"
+  },
+  {
+    "tier_key": "rbs-waf-basic-22",
+    "service_type": "rbs_waf",
+    "name": "Web Application Firewall — Basic",
+    "price_value": 5000,
+    "price_display": "৳5,000.00/mo",
+    "specs": {
+      "billing": "Per URL, unlimited pages",
+      "tier": "Basic"
+    },
+    "display_order": 22,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "rbs-waf-standard-23",
+    "service_type": "rbs_waf",
+    "name": "Web Application Firewall — Standard",
+    "price_value": 10000,
+    "price_display": "৳10,000.00/mo",
+    "specs": {
+      "billing": "Per URL, unlimited pages",
+      "tier": "Standard"
+    },
+    "display_order": 23,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "rbs-waf-strict-24",
+    "service_type": "rbs_waf",
+    "name": "Web Application Firewall — Strict",
+    "price_value": 20000,
+    "price_display": "৳20,000.00/mo",
+    "specs": {
+      "billing": "Per URL, unlimited pages",
+      "tier": "Strict"
+    },
+    "display_order": 24,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "rbs-waf-custom-25",
+    "service_type": "rbs_waf",
+    "name": "Web Application Firewall — Custom",
+    "price_value": 30000,
+    "price_display": "৳30,000.00/mo",
+    "specs": {
+      "billing": "Per URL, unlimited pages",
+      "tier": "Custom"
+    },
+    "display_order": 25,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "rbs-backup-standard-26",
+    "service_type": "rbs_backup",
+    "name": "Backup Service — Standard",
+    "price_value": 30,
+    "price_display": "৳30.00/GB/mo",
+    "specs": {
+      "note": "Used with other RBS",
+      "tier": "Standard"
+    },
+    "display_order": 26,
+    "price_unit": "/GB/mo"
+  },
+  {
+    "tier_key": "rbs-cloud_drive-standard-27",
+    "service_type": "rbs_cloud_drive",
+    "name": "Cloud Drive Service — Standard",
+    "price_value": 200,
+    "price_display": "৳200.00/mo",
+    "specs": {
+      "quota": "10GB/user",
+      "tier": "Standard"
+    },
+    "display_order": 27,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "rbs-colocation_rack_unit-basic-28",
+    "service_type": "rbs_colocation_rack_unit",
+    "name": "Rack Unit Allocation — Basic",
+    "price_value": 10000,
+    "price_display": "৳10,000.00/mo",
+    "specs": {
+      "resources": "2U, Redundant Power, SSL VPN, Online KVM Access",
+      "tier": "Basic"
+    },
+    "display_order": 28,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "rbs-colocation_rack_unit-standard-29",
+    "service_type": "rbs_colocation_rack_unit",
+    "name": "Rack Unit Allocation — Standard",
+    "price_value": 20000,
+    "price_display": "৳20,000.00/mo",
+    "specs": {
+      "resources": "4U, Redundant Power, SSL VPN, Online KVM Access",
+      "tier": "Standard"
+    },
+    "display_order": 29,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "rbs-colocation_rack_unit-advanced-30",
+    "service_type": "rbs_colocation_rack_unit",
+    "name": "Rack Unit Allocation — Advanced",
+    "price_value": 40000,
+    "price_display": "৳40,000.00/mo",
+    "specs": {
+      "resources": "8U, Redundant Power, SSL VPN, Online KVM Access",
+      "tier": "Advanced"
+    },
+    "display_order": 30,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "rbs-colocation_rack_unit-premium-31",
+    "service_type": "rbs_colocation_rack_unit",
+    "name": "Rack Unit Allocation — Premium",
+    "price_value": 80000,
+    "price_display": "৳80,000.00/mo",
+    "specs": {
+      "resources": "16U, Redundant Power, SSL VPN, Online KVM Access",
+      "tier": "Premium"
+    },
+    "display_order": 31,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "rbs-colocation_rack_space-basic-32",
+    "service_type": "rbs_colocation_rack_space",
+    "name": "Rack Space Allocation — Basic",
+    "price_value": 150000,
+    "price_display": "৳150,000.00/mo",
+    "specs": {
+      "resources": "42U, 600×800mm, 63A, 2 Industrial Sockets",
+      "tier": "Basic"
+    },
+    "display_order": 32,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "rbs-colocation_rack_space-standard-33",
+    "service_type": "rbs_colocation_rack_space",
+    "name": "Rack Space Allocation — Standard",
+    "price_value": 200000,
+    "price_display": "৳200,000.00/mo",
+    "specs": {
+      "resources": "42U, 600×1000mm, 63A, 2 Industrial Sockets",
+      "tier": "Standard"
+    },
+    "display_order": 33,
+    "price_unit": "/mo"
+  },
+  {
+    "tier_key": "rbs-physical_server-per-core-34",
+    "service_type": "rbs_physical_server",
+    "name": "Physical Server — Per Core",
+    "price_value": 1500,
+    "price_display": "৳1,500.00/core/mo",
+    "specs": {
+      "tier": "Per Core"
+    },
+    "display_order": 34,
+    "price_unit": "/core/mo"
+  },
+  {
+    "tier_key": "rbs-physical_server-per-gb-memory-35",
+    "service_type": "rbs_physical_server",
+    "name": "Physical Server — Per GB Memory",
+    "price_value": 500,
+    "price_display": "৳500.00/GB/mo",
+    "specs": {
+      "tier": "Per GB Memory"
+    },
+    "display_order": 35,
+    "price_unit": "/GB/mo"
+  },
+  {
+    "tier_key": "rbs-dns-standard-36",
+    "service_type": "rbs_dns",
+    "name": "DNS Service — Standard",
+    "price_value": 100,
+    "price_display": "৳100.00/domain/mo",
+    "specs": {
+      "tier": "Standard"
+    },
+    "display_order": 36,
+    "price_unit": "/domain/mo"
+  },
+  {
+    "tier_key": "rbs-consultation-standard-37",
+    "service_type": "rbs_consultation",
+    "name": "Design & Deployment Consultation",
+    "price_value": null,
+    "price_display": "৳2,000 – ৳5,000/hr (negotiable)",
+    "specs": {
+      "note": "Priced per complexity",
+      "tier": "Standard"
+    },
+    "display_order": 37,
+    "price_unit": null
+  }
+]
