@@ -228,13 +228,21 @@
   });
 
   // Deep-link support: arriving with #procedure-cloud / #procedure-request /
-  // #procedure-ssl (e.g. from the Forms page's VPN section) should switch to
-  // that tab and scroll to it automatically, not land on a hidden panel.
-  const hashTarget = window.location.hash.replace('#', '');
-  if (hashTarget && document.getElementById(hashTarget) && document.querySelector('.procedure-tab-btn[data-target="' + hashTarget + '"]')) {
-    activateTab(hashTarget);
-    document.getElementById(hashTarget).scrollIntoView();
+  // #procedure-ssl (e.g. from the Forms page's VPN section, or the "Ordering"
+  // nav dropdown) should switch to that tab and scroll to it automatically,
+  // not land on a hidden panel. This has to run both on initial page load
+  // AND on 'hashchange' — a same-page link click (already on /services,
+  // picking a different Ordering sub-item) only fires hashchange, it does
+  // not reload the page, so a load-only check misses it entirely.
+  function handleHash() {
+    const hashTarget = window.location.hash.replace('#', '');
+    if (hashTarget && document.getElementById(hashTarget) && document.querySelector('.procedure-tab-btn[data-target="' + hashTarget + '"]')) {
+      activateTab(hashTarget);
+      document.getElementById(hashTarget).scrollIntoView();
+    }
   }
+  handleHash();
+  window.addEventListener('hashchange', handleHash);
 })();
 </script>
 

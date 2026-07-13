@@ -11,7 +11,14 @@
             <tr>
               <td>{{ $page->title }}</td>
               <td><code>{{ $page->slug }}</code></td>
-              <td><a href="{{ route('admin.pages.edit', $page->slug) }}" class="row-action-btn">&#9998; Edit</a></td>
+              <td>
+                <div class="row-actions">
+                  <a href="{{ route('admin.pages.edit', $page->slug) }}" class="row-action-btn" title="Edit">&#9998;</a>
+                  @if (Route::has($page->slug))
+                    <a href="{{ route($page->slug) }}" target="_blank" class="row-action-btn" title="View live page">&#128065;</a>
+                  @endif
+                </div>
+              </td>
             </tr>
           @endforeach
         </tbody>

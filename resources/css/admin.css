@@ -624,10 +624,15 @@ body.admin-body { background: var(--off-white); }
 .abtn {
   display: inline-flex; align-items: center; gap: 7px;
   padding: 8px 16px; border-radius: 5px; font-size: .8rem; font-weight: 600;
-  cursor: pointer; border: 1px solid transparent; transition: all .15s; white-space: nowrap;
+  cursor: pointer; transition: all .15s; white-space: nowrap;
+  /* Neutral/secondary look is the default for a bare .abtn (e.g. "Cancel"
+     links) — without this, an unmodified .abtn falls back to the browser's
+     default link color instead of looking like a button. */
+  background: #fff; color: var(--gray-700); border: 1px solid var(--gray-300);
 }
-.abtn-primary { background: var(--green-dark); color: #fff; }
-.abtn-primary:hover { background: var(--green-mid); }
+.abtn:hover { background: var(--off-white); border-color: var(--gray-500); }
+.abtn-primary { background: var(--green-dark); color: #fff; border-color: var(--green-dark); }
+.abtn-primary:hover { background: var(--green-mid); border-color: var(--green-mid); }
 .abtn-secondary { background: #fff; color: var(--gray-700); border-color: var(--gray-300); }
 .abtn-secondary:hover { background: var(--off-white); border-color: var(--gray-500); }
 .abtn-ghost { background: transparent; color: var(--green-mid); border-color: transparent; padding: 8px 10px; }
@@ -637,7 +642,16 @@ body.admin-body { background: var(--off-white); }
 .abtn-sm { padding: 5px 11px; font-size: .73rem; }
 
 /* ── DATA TABLE ─────────────────────────────────────── */
-.admin-table-wrap { overflow-x: auto; }
+.admin-table-wrap { overflow-x: auto; position: relative; }
+@media (max-width: 760px) {
+  /* Hints that the table scrolls horizontally — without this the last
+     column(s) just look clipped off with no indication more content exists. */
+  .admin-table-wrap::after {
+    content: ''; position: absolute; top: 0; right: 0; bottom: 0; width: 24px;
+    background: linear-gradient(to right, transparent, rgba(0,0,0,.09));
+    pointer-events: none;
+  }
+}
 .admin-table { width: 100%; border-collapse: collapse; min-width: 640px; }
 .admin-table th {
   text-align: left; font-size: .68rem; font-weight: 700; color: var(--gray-500);

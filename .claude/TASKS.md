@@ -3,6 +3,133 @@
 Running log of work items. Newest entries at the top. Mark items
 `[ ]` open, `[x]` done, `[~]` in progress.
 
+## 2026-07-12 (evening) — Admin "Site Pages" list: Edit button was wrapping onto two lines
+User: Site Pages admin listing looked "a little broken." Screenshot showed
+why: its Edit link used `.row-action-btn` (a fixed 28×28px icon-only square,
+used everywhere else in the admin panel — Notices, Team, Pricing, Services,
+Messages all use it icon-only) but this was the one place that put actual
+text ("✏️ Edit") inside it, so the word wrapped onto a second line below the
+icon in the narrow cell. Confirmed via grep it was the only such usage
+project-wide. Fixed by dropping the text (icon-only, matching every other
+admin table) and wrapping it in the standard `.row-actions` div. Also added
+a second icon — a "View live page" link (`route($page->slug)`, which works
+directly since every page slug matches its public route name) — since the
+row otherwise felt sparse with only one action and a quick preview link is
+genuinely useful for a content editor. Verified all 5 view-links resolve
+to the correct live URL and a full HTTP+error sweep stayed clean.
+
+## 2026-07-12 (later afternoon) — "Ordering" nav dropdown's sub-tabs didn't switch on same-page clicks
+User: "Request Based Service Order" under the Ordering nav dropdown doesn't
+work. Reproduced with a scripted click (CDP): the URL hash correctly
+updated to `#procedure-request`, but the visible tab/panel never changed.
+
+Root cause: `services.blade.php`'s procedure-tab deep-link handler
+(`#procedure-cloud` / `#procedure-request` / `#procedure-ssl`, added in an
+earlier session for the Forms→Services cross-link) only ran once, at
+initial page load. A hash-only link click on a page you're *already on*
+(e.g. clicking "Ordering → Request Based Service Order" while already on
+`/services`, or the in-page "Request-Based Order" CTA button lower down)
+fires a `hashchange` event but never reloads the page — so the load-only
+check silently missed every same-page click. This affected all three
+Ordering sub-items and the on-page CTA link, not just the one the user
+happened to hit.
+
+Fix: extracted the hash-check into `handleHash()`, called once on load (as
+before) and again on `window.addEventListener('hashchange', handleHash)`.
+Verified via scripted clicks (CDP): fresh cross-page navigation to all 3
+`#procedure-*` hashes ✓, same-page nav-dropdown click ✓, same-page CTA
+button click ✓, direct tab-button clicks (regression check — these don't
+touch the hash at all) still work ✓, zero console errors/exceptions during
+any of it. Full site HTTP+error-log+CSS-class sweep afterward: clean.
+
+## 2026-07-12 (afternoon) — CRITICAL: stale Vite build was silently discarding hours of CSS work; site-wide design/responsive audit
+User: navbar active-state broken, admin panel design broken in places, needs a full
+device-responsiveness pass, "professional and nice" design, and a check for
+backend un-functionality. This turned into the most consequential fix of
+the project so far.
+
+**Root cause #1 (huge): `npm run build` had not been run since 2026-07-11
+20:00.** Every `resources/css/{public,admin}.css` edit made in every session
+since then — the entire pricing-table redesign, the structured page editor,
+the services catalog rewrite, the font-family reset, the about-page photo,
+literally everything — was sitting in source only. `@vite()` serves the
+compiled `public/build/assets/*` bundle (hashed filenames from
+`manifest.json`), not the source files, and nothing in this environment
+watches/rebuilds automatically (no `npm run dev` process, confirmed via
+`ps aux`). Diffing class names against source `.css` files (this project's
+established audit method) never caught this, because the source *did*
+contain the classes — the served bundle just didn't. Confirmed by grepping
+for `.pt-order-btn` etc. in the actual built CSS file (0 matches) vs. source
+(2 matches), and by a visual screenshot showing "Order →" rendering as
+plain blue link text instead of the intended green button. Ran
+`npm run build`; every subsequent screenshot confirmed the real, intended
+styling. **This must not be allowed to happen again** — any future CSS/JS
+change is inert until `npm run build` is re-run; there is no dev-server
+watching in this environment.
+
+**Root cause #2: navbar active-state was only ever wired for "Home."**
+`request()->routeIs(...)` was applied to exactly one of nine desktop nav
+items (and *zero* of nine mobile items, not even Home) — everywhere else,
+`.nav-links > li.active > a` (a real, styled state) just never got its
+class. Wired `routeIs()` per item on both desktop and mobile nav (About →
+`about`, Services → `services`, Pricing → `pricing.*`, Forms/Policies/
+Notices/Contact → their own route) — "Ordering" intentionally stays
+unhighlighted even on `/services`, matching the original static
+prototype's behavior exactly (confirmed against
+`_static-prototype/public/*.html`, which hardcoded `class="active"`
+per-page and never marked the "Ordering" dropdown).
+
+**Root cause #3 (found via visual screenshot, not code review): mobile nav
+hid its own first two items behind the page header.** `header` is
+`position:sticky; z-index:200`; `.mobile-nav` (the slide-in drawer) was
+`z-index:145` and `.mobile-nav-overlay` was `z-index:140` — both *below*
+the header, so the header painted on top of the open drawer's top ~130px,
+completely hiding "Home" and mostly hiding "About NDC" every time a mobile
+user opened the menu. Bumped both above the header (205 / 210). This has
+presumably been broken since the mobile nav was first built — a real,
+severe, previously-invisible bug (screenshots were the only way to catch
+it; a DOM/class audit alone reported both `<li>` elements as present and
+"correct").
+
+**Root cause #4: `.abtn` (admin button component) had no default
+color/background.** Every bare `class="abtn"` (no `abtn-primary`/
+`-secondary`/`-danger` modifier) — every "Cancel" link across every admin
+form, "Reply by Email," "Back to Messages," and the new Messages status
+filter tabs — rendered as unstyled browser-default blue link text instead
+of a button. Gave the base `.abtn` a neutral/secondary look by default
+(white bg, gray border, gray text) so an unmodified `.abtn` always looks
+like a button.
+
+**Also fixed while auditing:**
+- Removed a dead, unused "Comparison table" CSS block in `public.css`
+  (`.tier-col`/`.price-cell`/`.feature-name`, extracted from the static
+  prototype long ago, never used by any current Blade view) that
+  coincidentally reused the exact `.pricing-table`/`.pricing-table-wrap`
+  class names as this session's new tabular pricing page, silently
+  overriding a couple of properties (e.g. `min-width`).
+- Added a subtle right-edge fade-gradient hint to `.admin-table-wrap` and
+  `.pricing-table-wrap` on narrow viewports — tables scroll horizontally
+  correctly (verified by scripted scroll+screenshot) but gave no visual
+  indication there was more to see.
+
+**New capability this session: real headless-Chrome screenshots.**
+`google-chrome` is installed in this environment. Used
+`--headless=new --screenshot` for logged-out pages, and a small custom CDP
+script (`cdp_shot.mjs`, reusing an already-established Laravel session
+cookie via `Network.setCookie` — never re-deriving or writing the admin
+password to disk) for authenticated admin-panel screenshots at arbitrary
+viewport sizes. This is a major upgrade over the "diff class names against
+source CSS" method used everywhere earlier in this project — it would have
+caught issues #1, #3, and #4 above immediately, whereas the class-audit
+method structurally cannot (it checks presence of a class name, not
+whether the styling is actually being served or visually correct). Prefer
+this method for design/responsiveness verification going forward.
+
+Verified via screenshots at desktop (1400px)/tablet (820px)/mobile (390px)
+across ~10 public pages and ~6 admin pages, both logged-out and
+authenticated, plus a full HTTP+error-log sweep (zero errors). No backend
+functional bugs found beyond what's listed above.
+
 ## 2026-07-12 (later morning) — Homepage "Latest News" / "Official Notices" were the same list twice
 User asked where these two homepage panels get updated from — investigating
 found a real bug: `HomeController` called `NoticeService::latestPublic()`

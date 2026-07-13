@@ -209,7 +209,10 @@ nav {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,.45);
-  z-index: 140;
+  /* Must sit above header's z-index:200 — otherwise the sticky site header
+     paints on top of the overlay/drawer and hides the first nav items
+     (Home, About) behind it when the mobile menu is open. */
+  z-index: 205;
   opacity: 0;
   transition: opacity var(--transition);
 }
@@ -224,7 +227,7 @@ nav {
   width: min(300px, 85vw);
   height: 100vh;
   background: #0d2a1a;
-  z-index: 145;
+  z-index: 210;
   overflow-y: auto;
   transform: translateX(-100%);
   transition: transform var(--transition);
@@ -649,7 +652,14 @@ footer { background: #0e2a18; color: rgba(255,255,255,.75); }
 .pricing-section-desc { font-size:.87rem; color:var(--gray-500); max-width:680px; line-height:1.8; }
 
 /* ─── Pricing table (tabular pricing pages) ─────── */
-.pricing-table-wrap { overflow-x:auto; border:1px solid var(--gray-100); border-radius:8px; margin-bottom:20px; -webkit-overflow-scrolling:touch; }
+.pricing-table-wrap { overflow-x:auto; border:1px solid var(--gray-100); border-radius:8px; margin-bottom:20px; -webkit-overflow-scrolling:touch; position:relative; }
+@media (max-width: 760px) {
+  .pricing-table-wrap::after {
+    content:''; position:absolute; top:0; right:0; bottom:0; width:24px;
+    background:linear-gradient(to right, transparent, rgba(0,0,0,.09));
+    pointer-events:none;
+  }
+}
 .pricing-table { width:100%; border-collapse:collapse; min-width:640px; }
 .pricing-table thead th { background:var(--green-dark); color:#fff; text-align:left; font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.05em; padding:12px 16px; white-space:nowrap; }
 .pricing-table thead th[data-sort] { cursor:pointer; user-select:none; }
@@ -707,18 +717,6 @@ footer { background: #0e2a18; color: rgba(255,255,255,.75); }
 .pc-order-btn:hover { background:var(--green-dark); color:#fff; }
 .pricing-card.featured .pc-order-btn { background:var(--green-dark); color:#fff; }
 .pricing-card.featured .pc-order-btn:hover { background:var(--green-mid); }
-
-/* ─── Comparison table ──────────────────────────── */
-.pricing-table-wrap { overflow-x:auto; border-radius:8px; border:1px solid var(--gray-100); }
-.pricing-table { width:100%; border-collapse:collapse; min-width:600px; }
-.pricing-table th { background:var(--green-dark); color:#fff; font-size:.75rem; font-weight:700; padding:13px 16px; text-align:left; letter-spacing:.04em; text-transform:uppercase; white-space:nowrap; }
-.pricing-table th.tier-col { background:var(--green-mid); text-align:center; }
-.pricing-table td { padding:12px 16px; font-size:.83rem; color:var(--gray-700); border-bottom:1px solid var(--gray-100); vertical-align:middle; }
-.pricing-table tr:last-child td { border-bottom:none; }
-.pricing-table tr:hover td { background:var(--green-pale); }
-.pricing-table td.price-cell { text-align:center; font-family:var(--font-d); font-weight:700; font-size:1rem; color:var(--green-dark); }
-.pricing-table td.feature-name { font-weight:600; color:var(--gray-700); }
-.pricing-table thead tr:first-child th { border-right:1px solid rgba(255,255,255,.15); }
 
 /* ─── Notes / footnotes ─────────────────────────── */
 .pricing-notes { background:var(--green-pale); border:1px solid var(--green-light); border-radius:6px; padding:16px 20px; margin-top:16px; font-size:.8rem; color:var(--green-dark); line-height:1.8; }

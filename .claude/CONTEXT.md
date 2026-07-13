@@ -64,6 +64,36 @@ database/seeders/      — PagesSeeder, ServicesSeeder, NoticesSeeder,
 ```
 
 ## Known gotchas hit while building this — read before touching caching or PHP setup
+- **CSS/JS changes are invisible until you run `npm run build`.** There is no
+  `npm run dev` watcher process running in this environment, and `@vite()`
+  serves the compiled bundle in `public/build/assets/*` (named via
+  `public/build/manifest.json`), never the raw `resources/css/*.css` /
+  `resources/js/*.js` source files directly. On 2026-07-12 this was
+  discovered to have silently swallowed **~3 hours of CSS edits across
+  multiple sessions** (2026-07-11 20:00 build vs. edits up to 23:17+) —
+  every new class added to `public.css`/`admin.css` in that window rendered
+  as if it didn't exist (verified missing from the built file byte-for-byte
+  while present in source), which is why several "verified working" design
+  fixes from that window turned out not to actually be live. The
+  class-existence audit method used throughout this project (diff rendered
+  HTML classes against *source* CSS) cannot catch this — it only proves the
+  class is defined somewhere, not that the browser received it. **After any
+  CSS/JS edit, always run `npm run build` before considering the change
+  done**, and if verifying visually, prefer a real screenshot (see below)
+  over a source-vs-markup class diff.
+- **Real screenshots are possible in this environment** — `google-chrome`
+  is installed. For logged-out pages: `google-chrome --headless=new
+  --disable-gpu --no-sandbox --screenshot=out.png --window-size=W,H <url>`.
+  For authenticated admin pages, drive it over the DevTools Protocol
+  (`--remote-debugging-port=9222`, then a small script that opens a
+  WebSocket to the returned `webSocketDebuggerUrl`, sends
+  `Network.setCookie` using an already-established Laravel session cookie
+  — never re-derive/write the admin password to disk — then
+  `Page.navigate` + `Page.captureScreenshot`). This is dramatically more
+  reliable than static class-name auditing for catching real rendering
+  bugs (stale-build issues, z-index stacking bugs, missing default styles)
+  and should be the default verification method for any design/layout/
+  responsiveness work, not a fallback.
 - **PHP's `mbstring` extension is not installed** (`php -m | grep mbstring`
   returns nothing). This breaks `Str::limit()`, `Str::title()`, `Str::upper()`,
   `mb_*` functions, and Fortify's own login-throttle key generation

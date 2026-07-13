@@ -59,7 +59,7 @@
 <nav><div class="container"><div class="nav-inner">
   <ul class="nav-links">
     <li class="{{ request()->routeIs('home') ? 'active' : '' }}"><a href="{{ route('home') }}">Home</a></li>
-    <li class="has-drop"><a href="{{ Route::has('about') ? route('about') : '#' }}">About <span class="drop-arrow">&#9660;</span></a>
+    <li class="has-drop {{ request()->routeIs('about') ? 'active' : '' }}"><a href="{{ Route::has('about') ? route('about') : '#' }}">About <span class="drop-arrow">&#9660;</span></a>
       <ul>
         <li><a href="{{ Route::has('about') ? route('about') : '#' }}#history">Our History</a></li>
         <li><a href="{{ Route::has('about') ? route('about') : '#' }}#mission-vision">Mission &amp; Vision</a></li>
@@ -67,7 +67,7 @@
         <li><a href="{{ Route::has('about') ? route('about') : '#' }}#certifications">Certifications</a></li>
       </ul>
     </li>
-    <li class="has-drop"><a href="{{ Route::has('services') ? route('services') : '#' }}">Services <span class="drop-arrow">&#9660;</span></a>
+    <li class="has-drop {{ request()->routeIs('services') ? 'active' : '' }}"><a href="{{ Route::has('services') ? route('services') : '#' }}">Services <span class="drop-arrow">&#9660;</span></a>
       <ul>
         <li><a href="{{ Route::has('services') ? route('services') : '#' }}#cloud">Cloud Services (IaaS/PaaS/SaaS)</a></li>
         <li><a href="{{ Route::has('services') ? route('services') : '#' }}#hosting">Web &amp; Application Hosting</a></li>
@@ -85,16 +85,16 @@
         <li><a href="{{ Route::has('services') ? route('services') : '#' }}#procedure-ssl">SSL Certificate Order for VPN</a></li>
       </ul>
     </li>
-    <li class="has-drop"><a href="{{ Route::has('pricing.cloud') ? route('pricing.cloud') : '#' }}">Pricing <span class="drop-arrow">&#9660;</span></a>
+    <li class="has-drop {{ request()->routeIs('pricing.*') ? 'active' : '' }}"><a href="{{ Route::has('pricing.cloud') ? route('pricing.cloud') : '#' }}">Pricing <span class="drop-arrow">&#9660;</span></a>
       <ul>
         <li><a href="{{ Route::has('pricing.cloud') ? route('pricing.cloud') : '#' }}">Cloud Based Service</a></li>
         <li><a href="{{ Route::has('pricing.request') ? route('pricing.request') : '#' }}">Request Based Service</a></li>
       </ul>
     </li>
-    <li><a href="{{ Route::has('forms') ? route('forms') : '#' }}">Forms</a></li>
-    <li><a href="{{ Route::has('policies') ? route('policies') : '#' }}">Policies</a></li>
-    <li><a href="{{ Route::has('notices') ? route('notices') : '#' }}">Notices</a></li>
-    <li><a href="{{ Route::has('contact') ? route('contact') : '#' }}">Support &amp; Contact</a></li>
+    <li class="{{ request()->routeIs('forms') ? 'active' : '' }}"><a href="{{ Route::has('forms') ? route('forms') : '#' }}">Forms</a></li>
+    <li class="{{ request()->routeIs('policies') ? 'active' : '' }}"><a href="{{ Route::has('policies') ? route('policies') : '#' }}">Policies</a></li>
+    <li class="{{ request()->routeIs('notices') ? 'active' : '' }}"><a href="{{ Route::has('notices') ? route('notices') : '#' }}">Notices</a></li>
+    <li class="{{ request()->routeIs('contact') ? 'active' : '' }}"><a href="{{ Route::has('contact') ? route('contact') : '#' }}">Support &amp; Contact</a></li>
     <li class="nav-login-item"><a href="{{ route('login') }}">&#128274; Login</a></li>
   </ul>
   <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
@@ -108,8 +108,8 @@
     <button class="mobile-nav-close" id="mobileClose" aria-label="Close menu">&#10005;</button>
   </div>
   <ul class="mobile-nav-links">
-    <li><a href="{{ route('home') }}">Home</a></li>
-    <li class="has-mobile-drop">
+    <li class="{{ request()->routeIs('home') ? 'active' : '' }}"><a href="{{ route('home') }}">Home</a></li>
+    <li class="has-mobile-drop {{ request()->routeIs('about') ? 'active' : '' }}">
       <a href="{{ Route::has('about') ? route('about') : '#' }}">About NDC <span class="mobile-drop-toggle">&#9660;</span></a>
       <ul class="mobile-sub">
         <li><a href="{{ Route::has('about') ? route('about') : '#' }}#history">Our History</a></li>
@@ -118,7 +118,7 @@
         <li><a href="{{ Route::has('about') ? route('about') : '#' }}#certifications">Certifications</a></li>
       </ul>
     </li>
-    <li class="has-mobile-drop">
+    <li class="has-mobile-drop {{ request()->routeIs('services') ? 'active' : '' }}">
       <a href="{{ Route::has('services') ? route('services') : '#' }}">NDC Services <span class="mobile-drop-toggle">&#9660;</span></a>
       <ul class="mobile-sub">
         <li><a href="{{ Route::has('services') ? route('services') : '#' }}#cloud">Cloud Services (IaaS/PaaS/SaaS)</a></li>
@@ -138,17 +138,17 @@
         <li><a href="{{ Route::has('services') ? route('services') : '#' }}#procedure-ssl">SSL Certificate Order for VPN</a></li>
       </ul>
     </li>
-    <li class="has-mobile-drop">
+    <li class="has-mobile-drop {{ request()->routeIs('pricing.*') ? 'active' : '' }}">
       <a href="{{ Route::has('pricing.cloud') ? route('pricing.cloud') : '#' }}">Package &amp; Pricing <span class="mobile-drop-toggle">&#9660;</span></a>
       <ul class="mobile-sub">
         <li><a href="{{ Route::has('pricing.cloud') ? route('pricing.cloud') : '#' }}">Cloud Based Service</a></li>
         <li><a href="{{ Route::has('pricing.request') ? route('pricing.request') : '#' }}">Request Based Service</a></li>
       </ul>
     </li>
-    <li><a href="{{ Route::has('forms') ? route('forms') : '#' }}">Forms &amp; Agreements</a></li>
-    <li><a href="{{ Route::has('policies') ? route('policies') : '#' }}">Policies &amp; Guidelines</a></li>
-    <li><a href="{{ Route::has('notices') ? route('notices') : '#' }}">Notices</a></li>
-    <li><a href="{{ Route::has('contact') ? route('contact') : '#' }}">Support &amp; Contact</a></li>
+    <li class="{{ request()->routeIs('forms') ? 'active' : '' }}"><a href="{{ Route::has('forms') ? route('forms') : '#' }}">Forms &amp; Agreements</a></li>
+    <li class="{{ request()->routeIs('policies') ? 'active' : '' }}"><a href="{{ Route::has('policies') ? route('policies') : '#' }}">Policies &amp; Guidelines</a></li>
+    <li class="{{ request()->routeIs('notices') ? 'active' : '' }}"><a href="{{ Route::has('notices') ? route('notices') : '#' }}">Notices</a></li>
+    <li class="{{ request()->routeIs('contact') ? 'active' : '' }}"><a href="{{ Route::has('contact') ? route('contact') : '#' }}">Support &amp; Contact</a></li>
     <li style="border-top:2px solid var(--green-mid);margin-top:8px;padding-top:4px;">
       <a href="{{ route('login') }}" style="display:flex;align-items:center;gap:10px;padding:13px 20px;color:#fff;font-size:.88rem;font-weight:700;background:var(--green-accent);">
         <span>&#128274;</span> Login / Portal Access
